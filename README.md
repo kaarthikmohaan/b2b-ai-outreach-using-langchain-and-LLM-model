@@ -3,7 +3,7 @@
 # Overview
 AI-powered B2B outreach tool that automates job opportunity identification and generates personalized cold emails. Uses LLMs, vector search, and web scraping to analyze job postings, match role requirements against company portfolios, and create tailored outreach highlighting service alignment.
 
-Features
+# Features
 1. End-to-End Job Opportunity Analyzer
 •	Accepts a URL to a public job posting (including JS-heavy websites).
 •	Uses Playwright to asynchronously fetch and render dynamic job descriptions.
@@ -50,7 +50,8 @@ o	Open in Outlook
 •	Responsive layout with wide screen format.
 •	All outputs and interactions are reactive (Streamlit reruns statefully).
 •	Uses HTML injection for icon-styled buttons (Gmail, Outlook, Copy).
-Code Modules
+
+# Code Modules
 main.py
 •	Entry point of the Streamlit app.
 •	Handles user input, HTML parsing, state management, and rendering.
@@ -67,7 +68,8 @@ portfolio.py
 utils.py
 •	Provides functions to normalize skills.
 •	Cleans and sanitizes raw HTML text.
-Tech Stack
+
+#Tech Stack
 🧠  AI & LLM Integration
 LangChain	Framework for orchestrating LLM prompts, chaining inputs/outputs.
 ChatGroq	Access to Groq’s LLaMA 3.1 LLM, optimized for speed + cost.
@@ -76,25 +78,20 @@ LLM Models	Model: llama-3.1-8b-instant for job extraction, summarization, emails
 Streamlit	Main web framework to build the interactive UI (forms, toggles, output).
 Streamlit HTML	Custom rendering of buttons, email previews, Gmail/Outlook links.
 JavaScript	Used inside embedded HTML for clipboard copying functionality.
-
 🌐  Web Scraping & Content Extraction
 Playwright (async)	Headless browser automation to load and scrape JavaScript-heavy sites.
 BeautifulSoup	HTML parsing and job description extraction.
 Asyncio	Handles async Playwright scraping operations.
-
 📊  Portfolio Matching & Vector Search
 Pandas	Reads and processes the company_portfolio.csv.
 ChromaDB	Lightweight vector DB for fuzzy matching of job skills vs portfolio.
 uuid	Unique ID generation for vector documents.
-
 🔎  Text Processing & NLP Utilities
 Regex (re)	Custom experience/years extraction, section parsing.
 Skill Normalization	Synonym mapping (e.g., “py” → “Python”) for consistent matching.
-
 🧪  Testing & Debugging Tools
 Streamlit warnings/errors	Built-in feedback for debugging LLM failures.
 LangChain Output Parsers	Validates and parses model output (e.g., JsonOutputParser).
-
 🗃️  Project Structure & Configuration
 .env	  Stores API keys securely (e.g., GROQ_API_KEY).
 chains.py	  Contains logic for LLM prompting (job extraction, email, summarization).
@@ -102,7 +99,8 @@ main.py	  Entry-point for Streamlit app with UI logic.
 portfolio.py	  Portfolio vector matching engine.
 utils.py	  Text cleaning and skill synonym normalization logic.
 company_portfolio.csv	  Contains tech stack → portfolio link mappings.
-Test Cases
+
+# Test Cases
 ✅ Test Case 1: Job Description Extraction
 Purpose: Verify if the application can extract job title, description, skills, and experience from a live job posting URL.
 Test Step	Description
@@ -156,6 +154,6 @@ Test Step	Description
 Input	A very slow-loading or minimal HTML job posting page.
 Expected Output	- If fetch fails: “An error occurred: …”- If no job text: warning about missing job info.
 Validation	No crash. App remains usable.
-Conclusion
+
+# Conclusion
 Overall, the application successfully transforms manual outreach into an intelligent, scalable, and user-friendly workflow for business development teams. With further enhancements like user authentication, usage tracking, multi-user dashboards, and CRM integration, this tool can evolve into a powerful platform for enterprise-grade outreach automation.
-<img width="468" height="638" alt="image" src="https://github.com/user-attachments/assets/f0f98e6d-1bf2-4e7b-8600-44d8dd0ada93" />
