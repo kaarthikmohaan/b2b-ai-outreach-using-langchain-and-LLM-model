@@ -100,10 +100,15 @@ o	write_mail() – Email generation using job, tone, and matched links.
 
 🗃️  Project Structure & Configuration
 **.env**	  Stores API keys securely (e.g., GROQ_API_KEY).
+
 **chains.py**	  Contains logic for LLM prompting (job extraction, email, summarization).
+
 **main.py**	  Entry-point for Streamlit app with UI logic.
+
 **portfolio.py**	  Portfolio vector matching engine.
+
 **utils.py**	  Text cleaning and skill synonym normalization logic.
+
 **company_portfolio.csv**	  Contains tech stack → portfolio link mappings.
 
 # Test Cases
@@ -114,48 +119,55 @@ Input	Paste a live job URL with structured job description (e.g., Microsoft Care
 Expected Output	- Extracted JSON with fields: role, skills[], description, experience.- Role and experience should be inferred even if not explicitly labeled.
 Validation	Check Streamlit output for Job Title, Expected Skills, Experience, and Job Summary.
 Notes	Use roles like “Data Scientist”, “DevOps Engineer”, “Embedded Developer” for variety.
+
 ✅ Test Case 2: Skill Matching with Portfolio	
-Purpose: Validate that relevant portfolio links are matched based on skills extracted from job posts.
+**Purpose:** Validate that relevant portfolio links are matched based on skills extracted from job posts.
 Test Step	Description
 Input	A job post that includes skills like Python, AWS, Docker, Terraform.
 Expected Output	Matching links from company_portfolio.csv that include these keywords in Techstack.
 Validation	Ensure portfolio.query_links() returns list with at least 1 relevant link.
 Notes	Test edge cases like skills written in lowercase, hyphenated, or abbreviated (e.g., “py”, “terraform”).
+
 ✅ Test Case 3: Email Generation (Cold Outreach)
-Purpose: Ensure that the LLM generates a coherent, personalized outreach email aligned with job context and matched portfolio.
+**Purpose:** Ensure that the LLM generates a coherent, personalized outreach email aligned with job context and matched portfolio.
 Test Step	Description
 Input	Extracted job + 3–4 matching portfolio links. Tone = “Formal”.
 Expected Output	- Subject line inferred.- Email body explains how your company’s capabilities map to job requirements.- Embedded job link + portfolio links.- Ends with 3-line signature.
 Validation	Check if tone is formal and paragraphs include at least 2–3 matched services naturally.
 Notes	Repeat for tone = “Friendly”, “Technical”, “Concise” to validate tone switching.
+
 ✅  Test Case 4: Regenerate Logic
-Purpose: Validate that clicking “Regenerate” always fetches a different version of the email with same tone.
+**Purpose:** Validate that clicking “Regenerate” always fetches a different version of the email with same tone.
 Test Step	Description
 Input	Click “✨ Regenerate” multiple times.
 Expected Output	- New variations of email are produced with different wording.- Tone remains consistent unless changed.
 Validation	Confirm no reuse of previous phrasing or same sentence structure.
 Notes	Enable temp=0.8+ to enforce creative variation in LLM output.
+
 ✅  Test Case 5: No Skill Match Warning
-Purpose: Confirm the app warns when portfolio doesn’t match job skills.
+**Purpose:** Confirm the app warns when portfolio doesn’t match job skills.
 Test Step	Description
 Input	Job with rare stack (e.g., COBOL, Perl, Mainframes) not present in portfolio.
 Expected Output	Streamlit shows: “⚠️ No strong match, but including job ‘X’ due to partial skill overlap.”
 Validation	Email is still generated, but without portfolio links.
+
 ✅  Test Case 6: Clipboard Copy + Gmail/Outlook Buttons
-Purpose: Validate export of email content to third-party email clients.
+**Purpose:** Validate export of email content to third-party email clients.
 Test Step	Description
 Input	After email is generated, click “Copy Email”, “Open in Gmail”, or “Open in Outlook”.
 Expected Output	- Email body copied to clipboard.- Gmail/Outlook pre-fill the body and subject in compose window.
 Validation	Manual test by pasting in Gmail/Outlook and checking structure.
 Notes	Ensure mailto: encoding works as expected (special characters, newlines, quotes, etc.)
+
 ✅  Test Case 7: Multi-Tone Switching
-Purpose: Test if changing tone triggers correct re-generation.
+**Purpose:** Test if changing tone triggers correct re-generation.
 Test Step	Description
 Input	Switch from “Formal” → “Technical” → “Friendly”.
 Expected Output	- New email reflects tone (technical keywords, casual tone, etc.)- No reuse of prior output.
 Validation	Observe tone style in email (greeting, wording, paragraph structure).
+
 ✅  Test Case 8: Scraper Timeout or Empty Page
-Purpose: Handle slow or broken pages gracefully.
+**Purpose:** Handle slow or broken pages gracefully.
 Test Step	Description
 Input	A very slow-loading or minimal HTML job posting page.
 Expected Output	- If fetch fails: “An error occurred: …”- If no job text: warning about missing job info.
