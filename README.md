@@ -52,57 +52,63 @@ o	Open in Outlook
 •	Uses HTML injection for icon-styled buttons (Gmail, Outlook, Copy).
 
 # Code Modules
-main.py
+**main.py**
 •	Entry point of the Streamlit app.
 •	Handles user input, HTML parsing, state management, and rendering.
-chains.py
+**chains.py**
 •	Defines prompt templates and LLM call logic.
 •	Separates out three chains:
 o	extract_jobs() – JSON-based job field extraction.
 o	summarize() – Short job preview summarization.
 o	write_mail() – Email generation using job, tone, and matched links.
-portfolio.py
+**portfolio.py**
 •	Loads the internal service portfolio from CSV.
 •	Uses ChromaDB to store and retrieve vector-matched examples.
 •	Supports fuzzy skill matching using normalization.
-utils.py
+**utils.py**
 •	Provides functions to normalize skills.
 •	Cleans and sanitizes raw HTML text.
 
-#Tech Stack
+# Tech Stack
 🧠  AI & LLM Integration
-LangChain	Framework for orchestrating LLM prompts, chaining inputs/outputs.
-ChatGroq	Access to Groq’s LLaMA 3.1 LLM, optimized for speed + cost.
-LLM Models	Model: llama-3.1-8b-instant for job extraction, summarization, emails.
+**LangChain**	Framework for orchestrating LLM prompts, chaining inputs/outputs.
+**ChatGroq**	Access to Groq’s LLaMA 3.1 LLM, optimized for speed + cost.
+**LLM Models**	Model: llama-3.1-8b-instant for job extraction, summarization, emails.
+
 💻  Frontend & UI
-Streamlit	Main web framework to build the interactive UI (forms, toggles, output).
-Streamlit HTML	Custom rendering of buttons, email previews, Gmail/Outlook links.
-JavaScript	Used inside embedded HTML for clipboard copying functionality.
+**Streamlit**	Main web framework to build the interactive UI (forms, toggles, output).
+**Streamlit HTML**	Custom rendering of buttons, email previews, Gmail/Outlook links.
+**JavaScript**	Used inside embedded HTML for clipboard copying functionality.
+
 🌐  Web Scraping & Content Extraction
-Playwright (async)	Headless browser automation to load and scrape JavaScript-heavy sites.
-BeautifulSoup	HTML parsing and job description extraction.
-Asyncio	Handles async Playwright scraping operations.
+**Playwright (async)**	Headless browser automation to load and scrape JavaScript-heavy sites.
+**BeautifulSoup**	HTML parsing and job description extraction.
+**Asyncio**	Handles async Playwright scraping operations.
+
 📊  Portfolio Matching & Vector Search
-Pandas	Reads and processes the company_portfolio.csv.
-ChromaDB	Lightweight vector DB for fuzzy matching of job skills vs portfolio.
-uuid	Unique ID generation for vector documents.
+**Pandas**	Reads and processes the company_portfolio.csv.
+**ChromaDB**	Lightweight vector DB for fuzzy matching of job skills vs portfolio.
+**uuid**	Unique ID generation for vector documents.
+
 🔎  Text Processing & NLP Utilities
-Regex (re)	Custom experience/years extraction, section parsing.
-Skill Normalization	Synonym mapping (e.g., “py” → “Python”) for consistent matching.
+**Regex (re)**	Custom experience/years extraction, section parsing.
+**Skill Normalization**	Synonym mapping (e.g., “py” → “Python”) for consistent matching.
+
 🧪  Testing & Debugging Tools
-Streamlit warnings/errors	Built-in feedback for debugging LLM failures.
-LangChain Output Parsers	Validates and parses model output (e.g., JsonOutputParser).
+**Streamlit warnings/errors**	Built-in feedback for debugging LLM failures.
+**LangChain Output Parsers**	Validates and parses model output (e.g., JsonOutputParser).
+
 🗃️  Project Structure & Configuration
-.env	  Stores API keys securely (e.g., GROQ_API_KEY).
-chains.py	  Contains logic for LLM prompting (job extraction, email, summarization).
-main.py	  Entry-point for Streamlit app with UI logic.
-portfolio.py	  Portfolio vector matching engine.
-utils.py	  Text cleaning and skill synonym normalization logic.
-company_portfolio.csv	  Contains tech stack → portfolio link mappings.
+**.env**	  Stores API keys securely (e.g., GROQ_API_KEY).
+**chains.py**	  Contains logic for LLM prompting (job extraction, email, summarization).
+**main.py**	  Entry-point for Streamlit app with UI logic.
+**portfolio.py**	  Portfolio vector matching engine.
+**utils.py**	  Text cleaning and skill synonym normalization logic.
+**company_portfolio.csv**	  Contains tech stack → portfolio link mappings.
 
 # Test Cases
 ✅ Test Case 1: Job Description Extraction
-Purpose: Verify if the application can extract job title, description, skills, and experience from a live job posting URL.
+**Purpose:** Verify if the application can extract job title, description, skills, and experience from a live job posting URL.
 Test Step	Description
 Input	Paste a live job URL with structured job description (e.g., Microsoft Careers, Google Jobs).
 Expected Output	- Extracted JSON with fields: role, skills[], description, experience.- Role and experience should be inferred even if not explicitly labeled.
