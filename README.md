@@ -238,15 +238,3 @@ streamlit run main.py
 This application successfully transforms manual outreach into an intelligent, scalable, and user-friendly workflow for business development teams. With further enhancements like user authentication, usage tracking, multi-user dashboards, and CRM integration, this tool can evolve into a powerful platform for enterprise-grade outreach automation.
 
 ---
-
-## 📄 License
-
-[Add your license here]
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📧 Contact
-
-[Add your contact information here]
