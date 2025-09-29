@@ -52,20 +52,20 @@ o	Open in Outlook
 •	Uses HTML injection for icon-styled buttons (Gmail, Outlook, Copy).
 
 # Code Modules
-**main.py**
+1. main.py
 •	Entry point of the Streamlit app.
 •	Handles user input, HTML parsing, state management, and rendering.
-**chains.py**
+2. chains.py
 •	Defines prompt templates and LLM call logic.
 •	Separates out three chains:
 o	extract_jobs() – JSON-based job field extraction.
 o	summarize() – Short job preview summarization.
 o	write_mail() – Email generation using job, tone, and matched links.
-**portfolio.py**
+3. portfolio.py
 •	Loads the internal service portfolio from CSV.
 •	Uses ChromaDB to store and retrieve vector-matched examples.
 •	Supports fuzzy skill matching using normalization.
-**utils.py**
+4. utils.py
 •	Provides functions to normalize skills.
 •	Cleans and sanitizes raw HTML text.
 
