@@ -1,0 +1,54 @@
+Techstack,Links
+"JavaScript, React, Node.js, Express.js, MongoDB",https://example.com/react-portfolio
+"TypeScript, Angular, HTML, CSS, Frontend",https://example.com/angular-portfolio
+".NET, C#, SQL Server, ASP.NET",https://example.com/dotnet-portfolio
+"Vue.js, Nuxt.js, Vuex, PostgreSQL",https://example.com/vue-portfolio
+"Python, Django, Flask, MySQL, Pandas",https://example.com/python-portfolio
+"Java, Spring Boot, Hibernate, Oracle, Maven",https://example.com/java-portfolio
+"Kotlin, Android, Room, Firebase, Jetpack",https://example.com/kotlin-android-portfolio
+"iOS, Swift, Core Data, ARKit, UIKit",https://example.com/ios-portfolio
+"React Native, Expo, Redux, GraphQL",https://example.com/react-native-portfolio
+"Flutter, Dart, Firebase, GraphQL",https://example.com/flutter-portfolio
+"PHP, Laravel, WordPress, MySQL",https://example.com/php-portfolio
+"Magento, PHP, MySQL, eCommerce",https://example.com/magento-portfolio
+"Ruby, Ruby on Rails, PostgreSQL, Devise",https://example.com/ruby-portfolio
+"Go, Golang, Gin, PostgreSQL",https://example.com/go-portfolio
+"C, C++, Systems Programming, Pointers",https://example.com/cpp-portfolio
+"Scala, Akka, Play Framework, Functional Programming",https://example.com/scala-portfolio
+"R, RStudio, ggplot2, Data Science",https://example.com/r-portfolio
+"SQL, PostgreSQL, MySQL, SQLite, Joins",https://example.com/sql-portfolio
+"NoSQL, MongoDB, Cassandra, DynamoDB, Redis",https://example.com/nosql-portfolio
+"Hadoop, Spark, Hive, Kafka, HDFS",https://example.com/bigdata-portfolio
+"Machine Learning, Python, TensorFlow, PyTorch, Scikit-Learn",https://example.com/ml-portfolio
+"Deep Learning, Neural Networks, CNN, LSTM, Transformers",https://example.com/deep-learning-portfolio
+"Natural Language Processing, NLP, Spacy, BERT, LLMs",https://example.com/nlp-portfolio
+"Computer Vision, OpenCV, YOLO, Image Processing",https://example.com/cv-portfolio
+"Data Science, Pandas, Numpy, Matplotlib, EDA",https://example.com/datascience-portfolio
+"Business Intelligence, Tableau, Power BI, Qlik, Looker",https://example.com/bi-portfolio
+"DevOps, Jenkins, Docker, Kubernetes, Terraform",https://example.com/devops-portfolio
+"AWS, Amazon Web Services, Lambda, EC2, S3, CloudFormation",https://example.com/aws-portfolio
+"GCP, Google Cloud Platform, BigQuery, Cloud Functions",https://example.com/gcp-portfolio
+"Azure, Microsoft Azure, Cosmos DB, Azure DevOps",https://example.com/azure-portfolio
+"CI/CD, GitHub Actions, CircleCI, Travis CI, Bamboo",https://example.com/ci-cd-portfolio
+"Agile, Scrum, Kanban, Jira, Confluence",https://example.com/agile-portfolio
+"API Development, REST, GraphQL, Postman, Swagger",https://example.com/api-portfolio
+"Cybersecurity, SSL, TLS, Pen Testing, OWASP",https://example.com/security-portfolio
+"Testing, Selenium, Cypress, JUnit, Pytest, Jest",https://example.com/testing-portfolio
+"Cloud Architecture, Multi-cloud, Cloud Security",https://example.com/cloud-architecture-portfolio
+"Site Reliability Engineering, SRE, Prometheus, Grafana",https://example.com/sre-portfolio
+"Infrastructure as Code, Terraform, Pulumi, Ansible",https://example.com/iac-portfolio
+"Data Engineering, Airflow, DBT, Kafka, Spark",https://example.com/data-engineering-portfolio
+"ETL Pipelines, Informatica, Talend, Apache Nifi",https://example.com/etl-portfolio
+"Backend, Node.js, Django, Express, FastAPI",https://example.com/backend-portfolio
+"Frontend, React, Vue, Angular, HTML, CSS, JS",https://example.com/frontend-portfolio
+"Full-stack, MERN, MEAN, PERN",https://example.com/fullstack-portfolio
+"Cross-platform Development, Xamarin, Flutter, React Native",https://example.com/crossplatform-portfolio
+"Chatbots, Rasa, Dialogflow, GPT",https://example.com/chatbot-portfolio
+"Analytics, GA4, Mixpanel, Segment",https://example.com/analytics-portfolio
+"Version Control, Git, GitHub, Bitbucket",https://example.com/git-portfolio
+"Shell Scripting, Bash, Zsh, Cron",https://example.com/scripting-portfolio
+"Embedded Systems, Microcontrollers, C, Assembly",https://example.com/embedded-portfolio
+"Game Development, Unity, C#, Unreal Engine",https://example.com/game-dev-portfolio
+"Blockchain, Solidity, Ethereum, Web3.js",https://example.com/blockchain-portfolio
+"Quantum Computing, Qiskit, IBM Q",https://example.com/quantum-portfolio
+"AR/VR, Unity, ARKit, Oculus SDK",https://example.com/ar-vr-portfolio
